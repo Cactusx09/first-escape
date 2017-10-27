@@ -108,12 +108,21 @@ input,textarea{
     padding: 0.2em 0;
 }
 a{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	&:hover,
+	&:active{
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		outline: none;
+	}
 	text-decoration: none;
 }
 button{
 	padding: 0;
 	border: none;
 	background: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 /* ==========================================================
@@ -301,7 +310,9 @@ body,html{
 		border: none;
 		margin: 0;
 		width: 100%;
-		margin-bottom: 3rem;
+		padding-bottom: 3rem;
+		position: relative;
+		z-index: 2;
 	}
 	&__start{
 		>span{
@@ -375,8 +386,6 @@ body,html{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	position: relative;
-	z-index: 2;
 }
 .s_details{
 	background-color: $b;
