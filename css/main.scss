@@ -375,11 +375,14 @@ body,html{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	position: relative;
+	z-index: 2;
 }
 .s_details{
 	background-color: $b;
 	position: relative;
 	padding: 0 2.5rem 1.2rem;
+	flex-grow: 2;
 	h2{
 		line-height: 1.21;
 		font-weight: 700;
