@@ -248,6 +248,11 @@ body,html{
 				}
 			}
 		}
+		.footer{
+			button{
+				padding-bottom: 3rem;
+			}
+		}
 	}
 }
 
@@ -289,6 +294,7 @@ body,html{
 		text-transform: uppercase;
 		letter-spacing: 0.5rem;
 		line-height: 1;
+		margin-top: 1rem;
 	}
 	h4{
 		font-weight: 700;
@@ -310,7 +316,6 @@ body,html{
 		border: none;
 		margin: 0;
 		width: 100%;
-		padding-bottom: 3rem;
 		position: relative;
 		z-index: 2;
 	}
@@ -382,10 +387,22 @@ body,html{
 
 
 .s_main{
-	flex-grow: 2;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	@include flex(c,sb,$direction:c);
+	flex-grow: 2;
+	min-height: 31rem;
+	h1{
+		margin-top: auto;
+		margin-bottom: 0;
+		text-align: center;
+		font-weight: 700;
+		color: #fff;
+		font-size: 2.2rem;
+		letter-spacing: 0.15rem;
+		margin-bottom: 2rem;
+	}
 }
 .s_details{
 	background-color: $b;
@@ -549,8 +566,10 @@ body,html{
 	}
 }
 .s_tutorial{
-	min-height: 57rem;
+	min-height: 45rem;
 	background-color: $b;
+	flex-grow: 2;
+	@include flex(fs,fs,$direction:c);
 	p{
 		max-width: 23rem;
 		font-family: Verdana;
@@ -559,9 +578,11 @@ body,html{
 		color: #9ebabf;
 		font-size: 1.6rem;
 		position: relative;
+		padding: 1rem 0px;
 	}
 	&__qr{
 		margin-top: 12rem;
+		margin-bottom: auto;
 		margin-left: auto;
 		margin-right: 7rem;
 		&:before{
@@ -579,9 +600,9 @@ body,html{
 	}
 	&__cam{
 		margin-left: auto;
-		margin-right: 15rem;
-		margin-top: 5rem;
-		margin-bottom: 5rem;
+		margin-right: 14rem;
+		margin-top: auto;
+		margin-bottom: auto;
 		text-align: right;
 		padding-right: 3rem;
 		&:before{
@@ -591,16 +612,17 @@ body,html{
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
-			width: 7.9em;
-			height: 15.7em;
-			left: calc(100% - 3rem);
-			top: 96%;
+			width: 7.7em;
+			height: 15.0em;
+			left: calc(100% - .5rem);
+			top: 80%;
 		}
 	}
 	&__map{
 		max-width: 25rem !important;
 		margin-left: 4rem;
-		margin-top: 8rem;
+		margin-top: auto;
+		margin-bottom: 16rem;
 		&:before{
 			content: '';
 			position: absolute;
